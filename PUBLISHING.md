@@ -1,39 +1,30 @@
 # Set up GitHub and publish the visual
 
-The project is prepared for a GitHub repository named `MaggieGuanyuYang/PLOS_One_Paper_Distribution`. The local `main` branch contains the website, its BR-UK assets, and the GitHub Actions workflows. Local manuscripts, dependencies, build output and environment files are ignored by Git.
+The website, BR-UK assets and GitHub Actions workflows are committed and pushed to the public repository [MaggieGuanyuYang/PLOS_One_Paper_Distribution](https://github.com/MaggieGuanyuYang/PLOS_One_Paper_Distribution). Local manuscripts, dependencies, build output and environment files are ignored by Git.
 
-## 1. Create the repository
+## 1. Repository setup — complete
 
-On [GitHub’s new repository page](https://github.com/new), use:
+The repository is ready with:
 
 - **Owner:** `MaggieGuanyuYang`
 - **Repository name:** `PLOS_One_Paper_Distribution`
 - **Description:** `Interactive BR-UK research-to-action explorer based on Table 3 of Yang et al., PLOS One (2026).`
-- **Visibility:** Public for GitHub Pages on a free account. Private repositories require an eligible paid plan for Pages.
-- Leave the options to add a README, `.gitignore` and licence unchecked: the local project already contains its files and commit history.
+- **Visibility:** Public, which supports GitHub Pages on a free account.
+- **Default branch:** `main`.
+- **Local connection:** `origin` points to the repository and `main` tracks `origin/main`.
 
-Once the empty repository exists, connect and push the local project if this has not already been done:
-
-```sh
-cd '/Users/maggieyang/Desktop/ai coding/PLOS_One_Paper_Distribution'
-git remote add origin https://github.com/MaggieGuanyuYang/PLOS_One_Paper_Distribution.git
-git push -u origin main
-```
-
-If `origin` already exists, skip `git remote add origin`. The **Check website** workflow will build and test the pushed code. This check does not publish the website.
+The **Check website** workflow builds and tests pushed code. The separate deployment workflow publishes only when you run it. Continue with step 2 for the first publication.
 
 ## 2. Enable GitHub Pages
 
-1. Open the repository’s **Settings** tab.
-2. Choose **Pages** in the left sidebar.
-3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+1. Open the repository’s [Settings → Pages](https://github.com/MaggieGuanyuYang/PLOS_One_Paper_Distribution/settings/pages).
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
 
 ## 3. Publish the website
 
-1. Open the repository’s **Actions** tab.
-2. Select **Deploy to GitHub Pages** in the left sidebar.
-3. Click **Run workflow**, keep the branch as **main**, then click the green **Run workflow** button.
-4. Wait for the build, tests and deployment to show green checks. Open the website address shown by the deployment.
+1. Open [Actions → Deploy to GitHub Pages](https://github.com/MaggieGuanyuYang/PLOS_One_Paper_Distribution/actions/workflows/deploy-pages.yml).
+2. Click **Run workflow**, keep the branch as **main**, then click the green **Run workflow** button.
+3. Wait for the build, tests and deployment to show green checks. Open the website address shown by the deployment.
 
 With this owner and repository name, the expected public address is:
 
