@@ -1,13 +1,13 @@
 # Set up GitHub and publish the visual
 
-The website, BR-UK assets and GitHub Actions workflows are committed and pushed to the public repository [MaggieGuanyuYang/PLOS_One_Paper_Distribution](https://github.com/MaggieGuanyuYang/PLOS_One_Paper_Distribution). Local manuscripts, dependencies, build output and environment files are ignored by Git.
+The website, BR-UK assets and GitHub Actions workflows are committed and pushed to the public repository [MaggieGuanyuYang/BR-UK_capability_building_workshops](https://github.com/MaggieGuanyuYang/BR-UK_capability_building_workshops). Local manuscripts, dependencies, build output and environment files are ignored by Git.
 
 ## 1. Repository setup — complete
 
 The repository is ready with:
 
 - **Owner:** `MaggieGuanyuYang`
-- **Repository name:** `PLOS_One_Paper_Distribution`
+- **Repository name:** `BR-UK_capability_building_workshops`
 - **Description:** `Interactive BR-UK research-to-action explorer based on Table 3 of Yang et al., PLOS One (2026).`
 - **Visibility:** Public, which supports GitHub Pages on a free account.
 - **Default branch:** `main`.
@@ -17,18 +17,18 @@ The **Check website** workflow builds and tests pushed code. The separate deploy
 
 ## 2. Enable GitHub Pages
 
-1. Open the repository’s [Settings → Pages](https://github.com/MaggieGuanyuYang/PLOS_One_Paper_Distribution/settings/pages).
+1. Open the repository’s [Settings → Pages](https://github.com/MaggieGuanyuYang/BR-UK_capability_building_workshops/settings/pages).
 2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
 
 ## 3. Publish the website
 
-1. Open [Actions → Deploy to GitHub Pages](https://github.com/MaggieGuanyuYang/PLOS_One_Paper_Distribution/actions/workflows/deploy-pages.yml).
+1. Open [Actions → Deploy to GitHub Pages](https://github.com/MaggieGuanyuYang/BR-UK_capability_building_workshops/actions/workflows/deploy-pages.yml).
 2. Click **Run workflow**, keep the branch as **main**, then click the green **Run workflow** button.
 3. Wait for the build, tests and deployment to show green checks. Open the website address shown by the deployment.
 
 With this owner and repository name, the expected public address is:
 
-**https://maggieguanyuyang.github.io/PLOS_One_Paper_Distribution/**
+**https://maggieguanyuyang.github.io/BR-UK_capability_building_workshops/**
 
 The workflow gets the real public URL from GitHub Pages. It sets the repository path for scripts, fonts and the logo, and adds the canonical URL and absolute social-preview image URL. No token or secret needs to be entered manually.
 
