@@ -1,0 +1,62 @@
+[
+  {
+    "strategy": "1. Create accessible communication resources• Provide plain language summaries alongside technical details• Use bite-sized case studies with clear methodology• Use multiple channels (social media, newsletters, podcasts, and school education)• Use storytelling and narratives",
+    "quote": "“I know my colleagues wouldn’t have time to look at that [research papers], so seeing kind of bite size [...] case studies and then possibly kind of webinars explaining those things in more detail just makes it that much more kind of accessible and relatable.” (Public & Third sector)",
+    "frameworks": "Public perceptions and understanding;Communication and translation;Collaboration, networking, and engagement;Training and career development",
+    "actors": "Researchers;Research community/networks"
+  },
+  {
+    "strategy": "2. Establish a central repository/resource bank• Create searchable databases of interventions and case studies• Include failings, learnings, null results and replications• Provide AI-powered search functions to find tailored cases• Include job boards and career opportunities",
+    "quote": "“It would have certainly been useful to us at the beginning of our programme - a repository of case studies on previous behavioural science programmes. How they were implemented, what worked, what didn’t.” (Government)",
+    "frameworks": "Research practice and methodology;Behavioural research impact;Funding, resources, capacity and accessibility;Training and career development",
+    "actors": "Researchers;Research community/networks;Universities/research institutions"
+  },
+  {
+    "strategy": "3. Embed behavioural science into policy and research processes• Add behavioural science to policy development checklists• Position behavioural research earlier in decision-making• Invest in organisational-level capability, including formal facilitating roles• Create secondment opportunities",
+    "quote": "“In government departments, […] there’s a checklist which currently asks ‘what is the science advice in relation to this policy and development?’. And I think to have a separate box or checklist which says ‘is there a behavioural science advice?’ [...] is a system change that at least ensures that the issues will be considered.” (Government)",
+    "frameworks": "Research practice and methodology;Behavioural research impact;Leadership, embedding and prioritisation;Training and career development",
+    "actors": "Universities/research institutions;National/local governments;International organisations;Industry partners;Research user organisations"
+  },
+  {
+    "strategy": "4. Build multi-level training programmes• Provide training at different levels (introduction to advanced)• Include mentorship and implementation support• Build a searchable list of training opportunities",
+    "quote": "“It would be really helpful to have training and guidance that’s kind of tailored to different audiences [...] A lot of the people[…] in public health roles or health and social care [...] do want to kind of draw on people research and undertake it themselves, but often are scared by [...] the level of robustness required.” (Public & Third sector)",
+    "frameworks": "Research practice and methodology;Funding, resources, capacity and accessibility;Training and career development;Leadership, embedding and prioritisation",
+    "actors": "Universities/research institutions;Research user organisations"
+  },
+  {
+    "strategy": "5. Reform funding structures• Create funder collectives for larger projects• Target local authority partnerships• Support cross-sector collaboration• Define impact and success realistically when working with funders",
+    "quote": "“People are kind of our resource. They’re our Large Hadron Collider and they are expensive.” (Academia)",
+    "frameworks": "Behavioural research impact;Funding, resources, capacity and accessibility",
+    "actors": "Research funders"
+  },
+  {
+    "strategy": "6. Establish behavioural research leadership and champions• Create formal supportive leadership positions within organisations• Identify and support organisational champions• Train leaders on strategic planning and realistic expectations",
+    "quote": "“I’d like to see changes [...] in the higher, higher leadership. There just seems to be not a clear understanding of what behavioural science is and how it can help so oftentimes [...] we get asked to contribute to things and we’re thought of as like a magic bullet. And that way if you get us involved, we’ll fix it [...] it’s not how we work at all.” (Public & Third sector)",
+    "frameworks": "Public perceptions and understanding;Leadership, embedding and prioritisation",
+    "actors": "Researchers;Research users/practitioners;Research community/networks;Universities/research institutions;Research funders;National/local governments;International organisations;Industry partners;Research user organisations;Publishers"
+  },
+  {
+    "strategy": "7. Strengthen stakeholder and public engagement• Co-design solutions with affected populations and advisory groups• Educate clients and stakeholders about research processes• Ensure local and national government involvement in research for policy impact",
+    "quote": "“There’s a need to have a conversation around the different stakeholders [...] for example, another sector might see a nudge differently from sectors such as marketing, for example.” (SMEs)",
+    "frameworks": "Collaboration, networking, and engagement;Behavioural research impact",
+    "actors": "Researchers;Research users/practitioners;National/local governments;International organisations;Industry partners;Research user organisations"
+  },
+  {
+    "strategy": "8. Create transdisciplinary roles and networks• Bridge gaps between sectors and disciplines• Facilitate cross-sector learning and collaboration• Establish networking mechanisms (forums, conferences, mentorship)• Ensure geographic accessibility through online and regional events",
+    "quote": "“More opportunities to bridge the gap between the fields would be great... also just improving networks for collaboration between like researchers, NGOs.” (Public & Third sector)",
+    "frameworks": "Collaboration, networking, and engagement;Research practice and methodology",
+    "actors": "Research community/networks;Universities/research institutions;International organisations;Industry partners;Research user organisations"
+  },
+  {
+    "strategy": "9. Shift to systems-level approaches• Move beyond individual behaviour models• Use systems mapping as a foundation• Focus on long-term and sustainable change",
+    "quote": "“Now we’re really interested in how you apply systems thinking in particular to creating sustainable behaviour change, because we recognise there’s a need for that in particular.” (Academia)",
+    "frameworks": "Research practice and methodology;Behavioural research impact",
+    "actors": "Researchers;Research users/practitioners;Research community/networks;Industry partners;Research user organisations"
+  },
+  {
+    "strategy": "10. Establish quality standards and accessible guidance• Clear definitions and terminology• Methodological standards• Sector-specific guidance",
+    "quote": "“It would be good to have sort of something to lean on external to the organisation […] like the NICE guidelines, you know, shape how healthcare happens and they’re referred to. I almost visualise something a bit like that, but a behavioural science lens.” (Public & Third sector)",
+    "frameworks": "Public perceptions and understanding;Research practice and methodology;Funding, resources, capacity and accessibility",
+    "actors": "Research community/networks;Universities/research institutions;International organisations;Publishers"
+  }
+]

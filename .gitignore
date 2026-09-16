@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env.local
+.env
+.env.*
+!.env.example
+.DS_Store
+playwright-report/
+test-results/
+*.tsbuildinfo
+
+# Local manuscripts are not part of the website source.
+*.doc
+*.docx
+~$*
