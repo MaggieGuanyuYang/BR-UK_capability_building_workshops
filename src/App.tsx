@@ -125,7 +125,7 @@ export default function App() {
             These are participant-proposed strategies, not tested interventions.
           </p>
           <a href={PAPER_URL} target="_blank" rel="noreferrer">
-            Yang et al. · PLOS One · 2026
+            Yang and Saunders et al. · PLOS One · 2026
           </a>
         </footer>
       </div>

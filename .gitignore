@@ -13,3 +13,6 @@ test-results/
 *.doc
 *.docx
 ~$*
+
+# Local revision forms and completed review copies.
+/review/
