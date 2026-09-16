@@ -640,7 +640,7 @@ h1 em {
   background: #dce8d5;
   border-color: var(--green);
 }
-.has-plan {
+.page-shell.has-plan {
   padding-bottom: 86px;
 }
 .plan-tray {
