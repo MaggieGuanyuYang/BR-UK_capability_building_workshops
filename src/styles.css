@@ -1249,6 +1249,7 @@ h1 em {
   .site-header {
     min-height: 77px;
     gap: 10px;
+    padding: 12px 0;
   }
   .wordmark {
     font-size: 22px;
@@ -1256,6 +1257,7 @@ h1 em {
   }
   .site-header nav {
     gap: 8px;
+    flex-shrink: 0;
   }
   .header-link {
     font-size: 12px;

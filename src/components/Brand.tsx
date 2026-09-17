@@ -10,7 +10,9 @@ export function Brand() {
         aria-hidden="true"
       />
       <span className="brand-text">
-        <span className="brand-title">Research into action</span>
+        <span className="brand-title">
+          Findings from capability building workshops
+        </span>
         <span className="brand-subtitle">Behavioural Research UK</span>
       </span>
     </span>
