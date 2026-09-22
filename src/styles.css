@@ -239,8 +239,9 @@ h1 em {
   white-space: nowrap;
 }
 .step-heading > span {
-  font-size: 18px;
+  font-size: 30px;
   font-weight: 600;
+  line-height: 1;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0;
 }
@@ -316,13 +317,14 @@ h1 em {
   overflow: visible;
 }
 .network-links path {
-  stroke: #cdd0c8;
-  stroke-width: 1.5;
+  stroke: #e1e1db;
+  stroke-width: 1;
   fill: none;
   transition: stroke 0.2s;
 }
 .network-links path.is-relevant {
   stroke: var(--green);
+  stroke-width: 2.25;
 }
 .network-centre {
   fill: #dce8d5;
@@ -348,21 +350,20 @@ h1 em {
 }
 .node-circle {
   fill: #f0f0eb;
-  stroke: #c9cec3;
+  stroke: #d6d7d1;
   stroke-width: 1.5;
   transition:
     fill 0.2s,
     stroke 0.2s;
 }
 .is-relevant .node-circle {
-  fill: #e1eadb;
+  fill: var(--green);
   stroke: var(--green);
-  stroke-width: 1.7;
+  stroke-width: 2;
 }
 .is-selected .node-circle {
-  stroke: #18502e;
+  stroke: #6a6d68;
   stroke-width: 2.4;
-  fill: #e3ecda;
 }
 .node-focus {
   fill: none;
@@ -373,21 +374,33 @@ h1 em {
   stroke: #af622e;
 }
 .network-node:hover .node-circle {
-  fill: #d7e2cf;
-  stroke: var(--ink);
+  fill: #f0f0eb;
+  stroke: #6a6d68;
   stroke-width: 2.4;
+}
+.network-node.is-relevant:is(:hover, .is-selected) .node-circle {
+  fill: var(--ink);
+  stroke: var(--ink);
 }
 .node-number {
   font-size: 17px;
   font-weight: 500;
-  fill: var(--ink);
+  fill: #6a6d68;
   pointer-events: none;
+}
+.is-relevant .node-number {
+  fill: #fff;
+  font-weight: 600;
 }
 .node-label {
   font-size: 15px;
-  fill: #1c3930;
+  fill: #6a6d68;
   letter-spacing: -0.2px;
   pointer-events: none;
+}
+.is-relevant .node-label {
+  fill: var(--ink);
+  font-weight: 600;
 }
 .map-key {
   display: flex;
@@ -415,13 +428,13 @@ h1 em {
   height: 16px;
   display: inline-block;
   flex-shrink: 0;
-  background: #d5d8cf;
-  border: 1px solid #c5cabf;
+  background: #f0f0eb;
+  border: 1px solid #d6d7d1;
   border-radius: 50%;
 }
 .legend-dot.active {
-  background: #568559;
-  border-color: #568559;
+  background: var(--green);
+  border-color: var(--green);
 }
 .text-button {
   display: inline-flex;
@@ -600,6 +613,7 @@ h1 em {
 }
 .strategy-list-row {
   background: transparent;
+  color: #6a6d68;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -614,7 +628,15 @@ h1 em {
 }
 .strategy-list-row:hover,
 .strategy-list-row.is-selected {
-  background: #e5ecdf;
+  background: #f0f0eb;
+}
+.strategy-list-row:has(.list-number.is-relevant) {
+  background: #edf2e9;
+  color: var(--ink);
+  font-weight: 600;
+}
+.strategy-list-row:has(.list-number.is-relevant):is(:hover, .is-selected) {
+  background: #dce7d6;
 }
 .strategy-list-row > svg {
   margin-left: auto;
@@ -622,8 +644,9 @@ h1 em {
 .strategy-list-row small {
   display: block;
   font-size: 10px;
+  font-weight: 400;
   margin-top: 2px;
-  color: #566b5d;
+  color: inherit;
 }
 .list-number {
   width: 30px;
@@ -631,14 +654,15 @@ h1 em {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  border: 1px solid #bfc6b8;
+  border: 1px solid #d6d7d1;
   background: #f0f0eb;
   flex-shrink: 0;
   font-size: 12px;
 }
 .list-number.is-relevant {
-  background: #dce8d5;
+  background: var(--green);
   border-color: var(--green);
+  color: #fff;
 }
 .page-shell.has-plan {
   padding-bottom: 86px;
@@ -1074,7 +1098,7 @@ h1 em {
     gap: 12px;
   }
   .step-heading > span {
-    font-size: 16px;
+    font-size: 26px;
   }
   .map-column {
     padding: 0 18px;
@@ -1326,9 +1350,6 @@ h1 em {
     gap: 15px;
     margin-bottom: 20px;
     white-space: normal;
-  }
-  .step-heading > span {
-    font-size: 16px;
   }
   .role-column {
     margin-bottom: 25px;
