@@ -229,8 +229,8 @@ h1 em {
 }
 .step-heading {
   display: flex;
-  align-items: baseline;
-  gap: 21px;
+  align-items: center;
+  gap: 16px;
   margin: 0 0 22px;
   font-size: 20px;
   line-height: 1.4;
@@ -239,7 +239,16 @@ h1 em {
   white-space: nowrap;
 }
 .step-heading > span {
-  font-size: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 32px;
   font-weight: 600;
   line-height: 1;
   font-variant-numeric: tabular-nums;
@@ -1081,6 +1090,9 @@ h1 em {
   .study-summary {
     width: 300px;
   }
+  .study-stats > div {
+    padding-inline: 10px;
+  }
   .study-stats dd {
     font-size: 44px;
   }
@@ -1098,7 +1110,9 @@ h1 em {
     gap: 12px;
   }
   .step-heading > span {
-    font-size: 26px;
+    width: 44px;
+    height: 44px;
+    font-size: 28px;
   }
   .map-column {
     padding: 0 18px;
