@@ -1,6 +1,6 @@
 # Suggested LinkedIn post
 
-What can you do to strengthen behavioural research?
+What can you do to enhance behavioural research capability?
 
 Our new PLOS One paper brings together insights from 58 participants across five UK workshops, involving academia, government, public and third sectors, and the private sector.
 
@@ -24,4 +24,4 @@ Attach `public/linkedin-post.png` (1080 × 1080). Replace the bold placeholder a
 
 Suggested alt text:
 
-“Stronger behavioural research. What can you do?” Research into action, based on a UK study with 58 participants in five workshops. A circular map shows ten strategies. The example researcher view highlights communicating clearly, sharing resources, supporting champions, co-designing solutions, and thinking in systems. Readers are invited to choose their role and find a next step. Yang et al., PLOS One, 2026.
+“What can you do to enhance behavioural research capability?” Research into action, based on a UK study with 58 participants in five workshops. A circular map shows ten strategies. The example researcher view highlights communicating clearly, sharing resources, supporting champions, co-designing solutions, and thinking in systems. Readers are invited to choose their role and find a next step. Yang et al., PLOS One, 2026.

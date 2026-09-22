@@ -71,9 +71,8 @@ export default function App() {
           <section className="hero" aria-labelledby="page-title">
             <div className="hero-copy">
               <h1 id="page-title">
-                Stronger behavioural research.
-                <br />
-                <em>What can you do?</em>
+                What can you do to enhance{" "}
+                <em>behavioural research capability?</em>
               </h1>
               <p>
                 Choose your role. Explore the strategies. Find your next step.

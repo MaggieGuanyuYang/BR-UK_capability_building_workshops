@@ -164,6 +164,7 @@ button:active {
 }
 h1 {
   font-family: var(--serif);
+  text-wrap: balance;
   font-size: clamp(38px, 3.5vw, 54px);
   font-weight: 600;
   line-height: 1.08;

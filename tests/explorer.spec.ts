@@ -41,7 +41,7 @@ test("loads a meaningful screen with no runtime or asset errors", async ({
   await page.evaluate(() => document.fonts.ready);
   await expect(page).toHaveTitle("Research into action | Behavioural research");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "What can you do?",
+    "What can you do to enhance behavioural research capability?",
   );
   await expect(
     page.getByRole("heading", {

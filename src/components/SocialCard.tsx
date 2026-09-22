@@ -11,9 +11,7 @@ export function SocialCard({ square }: { square: boolean }) {
       <div className="social-content">
         <div className="social-message">
           <h1>
-            Stronger behavioural research.
-            <br />
-            <em>What can you do?</em>
+            What can you do to enhance <em>behavioural research capability?</em>
           </h1>
           <p>
             Choose your role.
