@@ -114,6 +114,7 @@ button:active {
   min-width: 0;
 }
 .brand-title {
+  font-size: 0.8em;
   line-height: 1.12;
 }
 .brand-subtitle {
@@ -1566,7 +1567,7 @@ h1 em {
     max-width: 145px;
   }
   .site-header .brand-title {
-    font-size: 18px;
+    font-size: 16px;
   }
   .page-shell {
     padding: 0 17px;
