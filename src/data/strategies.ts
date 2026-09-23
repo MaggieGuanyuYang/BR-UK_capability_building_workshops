@@ -81,7 +81,7 @@ const mapLabels = [
   ["Build", "skills"],
   ["Rethink", "funding"],
   ["Support", "champions"],
-  ["Co-design", "solutions"],
+  ["Strengthen", "engagement"],
   ["Connect", "disciplines"],
   ["Think in", "systems"],
   ["Set quality", "standards"],
