@@ -8,6 +8,27 @@ const sourceTable = JSON.parse(
     "utf8",
   ),
 ) as { actors: string; strategy: string }[];
+const actionClarifications = JSON.parse(
+  readFileSync(
+    new URL("../src/data/action-clarifications.json", import.meta.url),
+    "utf8",
+  ),
+) as { strategyId: number; original: string; text: string }[];
+
+function expectedActions(strategyIndex: number) {
+  return sourceTable[strategyIndex].strategy
+    .split("•")
+    .slice(1)
+    .map((action) => {
+      const original = action.trim();
+      return (
+        actionClarifications.find(
+          (item) =>
+            item.strategyId === strategyIndex + 1 && item.original === original,
+        )?.text ?? original
+      );
+    });
+}
 
 const audienceLabels = [
   ["Researchers", "Researchers"],
@@ -52,30 +73,56 @@ test("loads a meaningful screen with no runtime or asset errors", async ({
   expect(errors).toEqual([]);
 });
 
-test("all ten audience maps agree with the original published Table 3", async ({
-  page,
-}) => {
-  await page.goto("/");
-  for (const [label, source] of audienceLabels) {
-    await page.getByRole("button", { name: label, exact: true }).click();
-    const expected = sourceTable.flatMap((row, index) =>
-      row.actors.split(";").includes(source)
-        ? [String(index + 1).padStart(2, "0")]
-        : [],
-    );
-    await expect(
-      page.locator(".network-node.is-relevant .node-number"),
-    ).toHaveText(expected);
-    await expect(page.locator(".centre-count")).toHaveText(
-      `${expected.length} relevant strategies`,
-    );
-    await expect(page.locator(".strategy-index")).toHaveText(
-      `Strategy ${expected[0]}`,
-    );
-  }
-});
+for (const width of [1536, 390]) {
+  test(`all ten audience filters preserve Table 3 mappings and dim other strategies at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 1024 });
+    await page.goto("/");
+    for (const [label, source] of audienceLabels) {
+      if (width < 700) {
+        await page
+          .getByRole("combobox", { name: /Choose your role/ })
+          .selectOption({ label });
+      } else {
+        await page.getByRole("button", { name: label, exact: true }).click();
+      }
+      const expected = sourceTable.flatMap((row, index) =>
+        row.actors.split(";").includes(source)
+          ? [String(index + 1).padStart(2, "0")]
+          : [],
+      );
+      await expect(
+        page.locator(".network-node.is-relevant .node-number"),
+      ).toHaveText(expected);
+      await expect(page.locator(".centre-count")).toHaveText(
+        `${expected.length} relevant strategies`,
+      );
+      await expect(page.locator(".strategy-index")).toHaveText(
+        `Strategy ${expected[0]}`,
+      );
+      await page.mouse.move(0, 0);
+      const opacity = await page.locator(".network-node").evaluateAll((nodes) =>
+        nodes.map((node) => ({
+          relevant: node.classList.contains("is-relevant"),
+          opacity: Number(getComputedStyle(node).opacity),
+        })),
+      );
+      for (const node of opacity) {
+        if (node.relevant) expect(node.opacity).toBe(1);
+        else expect(node.opacity).toBeLessThanOrEqual(0.4);
+      }
+      await page.getByRole("button", { name: "View as a list" }).click();
+      await expect(page.locator(".strategy-list-row")).toHaveCount(10);
+      await expect(page.locator(".list-number.is-relevant")).toHaveText(
+        expected,
+      );
+      await page.getByRole("button", { name: "View as a map" }).click();
+    }
+  });
+}
 
-test("all ten strategy panels reproduce Table 3 titles and actions verbatim", async ({
+test("all ten strategy panels show Table 3 titles and the agreed appendix-based actions", async ({
   page,
 }) => {
   await page.goto("/");
@@ -83,12 +130,12 @@ test("all ten strategy panels reproduce Table 3 titles and actions verbatim", as
     await page
       .getByRole("button", { name: new RegExp(`^Strategy ${index + 1}:`) })
       .click();
-    const [numberedTitle, ...actions] = sourceTable[index].strategy.split("•");
+    const [numberedTitle] = sourceTable[index].strategy.split("•");
     expect(await page.locator("#strategy-title").textContent()).toBe(
       numberedTitle.replace(/^\d+\.\s*/, "").trim(),
     );
     expect(await page.locator(".action-list li").allTextContents()).toEqual(
-      actions.map((action) => action.trim()),
+      expectedActions(index),
     );
     await expect(
       page.locator(".strategy-summary, .detail-copy h4"),
@@ -103,7 +150,7 @@ test("all ten strategy panels reproduce Table 3 titles and actions verbatim", as
   }
 });
 
-test("all ten saved, copied and downloaded strategies preserve the exact Table 3 wording", async ({
+test("all ten saved, copied and downloaded strategies preserve the agreed wording and attribution", async ({
   page,
   context,
 }) => {
@@ -113,27 +160,32 @@ test("all ten saved, copied and downloaded strategies preserve the exact Table 3
   const saved = page.locator(".saved-strategies > li");
   await expect(saved).toHaveCount(10);
   for (let index = 0; index < sourceTable.length; index++) {
-    const [numberedTitle, ...actions] = sourceTable[index].strategy.split("•");
+    const [numberedTitle] = sourceTable[index].strategy.split("•");
     expect(await saved.nth(index).locator("h3").textContent()).toBe(
       numberedTitle.replace(/^\d+\.\s*/, "").trim(),
     );
     expect(await saved.nth(index).locator("ul li").allTextContents()).toEqual(
-      actions.map((action) => action.trim()),
+      expectedActions(index),
     );
   }
   const downloadEvent = page.waitForEvent("download");
   await page.getByRole("button", { name: "Download plan" }).click();
   const download = await downloadEvent;
   const downloadedText = await readFile((await download.path())!, "utf8");
-  for (const row of sourceTable) {
-    const [numberedTitle, ...actions] = row.strategy.split("•");
+  for (const [index, row] of sourceTable.entries()) {
+    const [numberedTitle] = row.strategy.split("•");
     expect(downloadedText).toContain(
       [
         numberedTitle.trim(),
-        ...actions.map((action) => `  [ ] ${action.trim()}`),
+        ...expectedActions(index).map((action) => `  [ ] ${action}`),
       ].join("\n"),
     );
   }
+  expect(downloadedText).toContain(
+    "Action wording is adapted from Table 3 and Appendices B and C.",
+  );
+  expect(downloadedText).toContain("journal.pone.0357909.s003");
+  expect(downloadedText).toContain("journal.pone.0357909.s004");
   await page.getByRole("button", { name: "Copy plan", exact: true }).click();
   expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(
     downloadedText,
@@ -144,6 +196,12 @@ test("keyboard, list alternative and history update the selected strategy", asyn
   page,
 }) => {
   await page.goto("/");
+  const otherStrategy = page.getByRole("button", { name: /^Strategy 5:/ });
+  await expect(otherStrategy).toHaveCSS("opacity", "0.35");
+  await otherStrategy.focus();
+  await expect(otherStrategy).toHaveCSS("opacity", "1");
+  await page.keyboard.press("Enter");
+  await expect(page.locator(".other-role-note")).toBeVisible();
   const node = page.getByRole("button", { name: /^Strategy 9:/ });
   await node.focus();
   await page.keyboard.press("Enter");
@@ -276,11 +334,19 @@ test("desktop, mobile and source dialog have no automated accessibility violatio
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
   await page.getByRole("button", { name: "About the study" }).click();
   await expect(page.getByRole("dialog")).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: "Appendix B: framework tables" }),
+  ).toHaveAttribute("href", /journal\.pone\.0357909\.s003$/);
+  await expect(
+    page.getByRole("link", { name: "Appendix C: detailed strategies" }),
+  ).toHaveAttribute("href", /journal\.pone\.0357909\.s004$/);
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
   await page.keyboard.press("Escape");
   await expect(
     page.getByRole("button", { name: "About the study" }),
   ).toBeFocused();
   await page.setViewportSize({ width: 390, height: 844 });
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  await page.getByRole("button", { name: "View as a list" }).click();
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
 });

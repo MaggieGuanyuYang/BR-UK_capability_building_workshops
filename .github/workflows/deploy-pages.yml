@@ -33,7 +33,7 @@ jobs:
           VITE_SITE_URL: ${{ steps.pages.outputs.base_url }}
       - name: Install the test browser
         run: npx playwright install --with-deps chromium
-      - name: Check the exact Table 3 text and interactions
+      - name: Check source mappings, agreed action wording and interactions
         run: npm test
         env:
           PLAYWRIGHT_CHANNEL: chromium

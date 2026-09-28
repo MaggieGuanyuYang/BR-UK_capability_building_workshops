@@ -331,11 +331,15 @@ h1 em {
   stroke: #e1e1db;
   stroke-width: 1;
   fill: none;
-  transition: stroke 0.2s;
+  opacity: 0.35;
+  transition:
+    stroke 0.2s,
+    opacity 0.2s;
 }
 .network-links path.is-relevant {
   stroke: var(--green);
   stroke-width: 2.25;
+  opacity: 1;
 }
 .network-centre {
   fill: #dce8d5;
@@ -358,6 +362,13 @@ h1 em {
 .network-node {
   cursor: pointer;
   outline: none;
+  transition: opacity 0.2s;
+}
+.network-node:not(.is-relevant) {
+  opacity: 0.35;
+}
+.network-node:not(.is-relevant):is(:hover, :focus-visible, .is-selected) {
+  opacity: 1;
 }
 .node-circle {
   fill: #f0f0eb;
@@ -624,7 +635,7 @@ h1 em {
 }
 .strategy-list-row {
   background: transparent;
-  color: #6a6d68;
+  color: #71736e;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -632,19 +643,22 @@ h1 em {
   padding: 9px 12px;
   min-height: 49px;
   text-align: left;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid #ecece7;
   font-size: 14px;
   line-height: 1.3;
   border-radius: 5px;
 }
 .strategy-list-row:hover,
-.strategy-list-row.is-selected {
+.strategy-list-row.is-selected,
+.strategy-list-row:focus-visible {
   background: #f0f0eb;
+  color: #62665f;
 }
 .strategy-list-row:has(.list-number.is-relevant) {
   background: #edf2e9;
   color: var(--ink);
   font-weight: 600;
+  border-bottom-color: var(--line);
 }
 .strategy-list-row:has(.list-number.is-relevant):is(:hover, .is-selected) {
   background: #dce7d6;
@@ -665,8 +679,8 @@ h1 em {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  border: 1px solid #d6d7d1;
-  background: #f0f0eb;
+  border: 1px solid #e2e3dd;
+  background: transparent;
   flex-shrink: 0;
   font-size: 12px;
 }

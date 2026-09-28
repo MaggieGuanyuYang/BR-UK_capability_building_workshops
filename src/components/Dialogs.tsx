@@ -1,5 +1,8 @@
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import {
+  ACTION_WORDING_NOTE,
+  APPENDIX_B_URL,
+  APPENDIX_C_URL,
   CITATION,
   PAPER_TITLE,
   PAPER_URL,
@@ -99,9 +102,9 @@ export function AboutDialog({
       <p>
         The study brought together{" "}
         <strong>10 participant-proposed strategies</strong>. This interactive
-        visual reproduces the strategy titles and actions from Table 3 verbatim
-        and preserves its links between strategies and actor groups. The map
-        uses short labels for navigation.
+        visual preserves Table 3’s strategy titles and links to actor groups.
+        Actions are clarified using details and examples from Appendices B and
+        C. The map uses short labels for navigation.
       </p>
       <div className="research-note">
         <strong>A starting point for discussion</strong>
@@ -139,6 +142,17 @@ export function AboutDialog({
           <Icon name="external" size={17} />
         </a>
       </div>
+      <p>
+        Explore the supporting detail in{" "}
+        <a href={APPENDIX_B_URL} target="_blank" rel="noreferrer">
+          Appendix B: framework tables
+        </a>{" "}
+        and{" "}
+        <a href={APPENDIX_C_URL} target="_blank" rel="noreferrer">
+          Appendix C: detailed strategies
+        </a>
+        .
+      </p>
       <div className="about-footer">
         <p>
           Adapted from Yang et al. (2026),{" "}
@@ -177,7 +191,10 @@ function planText(saved: number[]) {
       "",
     ]),
     "Source: " + CITATION,
-    "Strategy titles and actions reproduced verbatim from Table 3. Original article: CC BY 4.0.",
+    "Strategy titles reproduced verbatim from Table 3. " + ACTION_WORDING_NOTE,
+    "Appendix B: " + APPENDIX_B_URL,
+    "Appendix C: " + APPENDIX_C_URL,
+    "Original article: CC BY 4.0.",
     "Strategies reflect the UK study context and may require adaptation elsewhere.",
     "",
     "Reopen this selection: " + makeShareUrl(saved),
@@ -296,11 +313,11 @@ export function PlanDialog({
       </p>
       <p className="plan-citation">
         These are participant-proposed strategies, not tested interventions.
-        Strategy titles and actions reproduced verbatim from{" "}
+        Strategy titles reproduced verbatim from{" "}
         <a href={TABLE_URL} target="_blank" rel="noreferrer">
           Table 3, Yang et al., PLOS One (2026)
         </a>
-        . CC BY 4.0.
+        . {ACTION_WORDING_NOTE} CC BY 4.0.
       </p>
     </Modal>
   );

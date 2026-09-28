@@ -1,0 +1,144 @@
+[
+  {
+    "strategyId": 1,
+    "original": "Use storytelling and narratives",
+    "text": "Use storytelling and narratives, e.g., podcasts with bite-sized chunks.",
+    "sources": ["Appendix C 2.4", "Appendix B, Table B2, Cross-sector 1"]
+  },
+  {
+    "strategyId": 2,
+    "original": "Provide AI-powered search functions to find tailored cases",
+    "text": "Consider developing an AI-powered search tool for tailored case studies, e.g., using “COM-B, leadership, automotive industry” as search terms.",
+    "sources": ["Appendix C 4.11", "Appendix B, Table B6, Cross-sector 2"]
+  },
+  {
+    "strategyId": 3,
+    "original": "Position behavioural research earlier in decision-making",
+    "text": "Include behavioural science at the start of policy development.",
+    "sources": ["Appendix B, Table B8, Government 1"]
+  },
+  {
+    "strategyId": 3,
+    "original": "Invest in organisational-level capability, including formal facilitating roles",
+    "text": "Invest in organisational capability, e.g., through a council research facilitator who builds links with local universities and supports research governance.",
+    "sources": [
+      "Appendix C 4.7",
+      "Appendix C 8.3",
+      "Appendix B, Table B3, Public & Third 2"
+    ]
+  },
+  {
+    "strategyId": 4,
+    "original": "Include mentorship and implementation support",
+    "text": "Provide mentorship and support alongside behavioural research training to help people apply their skills.",
+    "sources": ["Appendix C 7.2"]
+  },
+  {
+    "strategyId": 5,
+    "original": "Create funder collectives for larger projects",
+    "text": "Create a research funder collective that could provide larger budgets for large-scale projects.",
+    "sources": ["Appendix C 6.1"]
+  },
+  {
+    "strategyId": 5,
+    "original": "Target local authority partnerships",
+    "text": "Target research calls at local authorities or partnerships involving them to investigate health behaviours within their responsibilities.",
+    "sources": ["Appendix B, Table B6, Public & Third 2"]
+  },
+  {
+    "strategyId": 5,
+    "original": "Support cross-sector collaboration",
+    "text": "Provide more funding for cross-sector collaboration, e.g., between academia and industry.",
+    "sources": ["Appendix C 6.3", "Appendix B, Table B6, SMEs 2"]
+  },
+  {
+    "strategyId": 5,
+    "original": "Define impact and success realistically when working with funders",
+    "text": "Define impact realistically with funders, accounting for delayed behavioural outcomes in design and evaluation timelines.",
+    "sources": ["Appendix C 5.7"]
+  },
+  {
+    "strategyId": 6,
+    "original": "Create formal supportive leadership positions within organisations",
+    "text": "Create formal behavioural science leadership roles to clarify its place in the organisation and raise its status.",
+    "sources": ["Appendix C 8.4"]
+  },
+  {
+    "strategyId": 6,
+    "original": "Identify and support organisational champions",
+    "text": "Identify organisational champions and support them with training.",
+    "sources": ["Table 3, strategy 6", "Appendix B, Table B7, Cross-sector 2"]
+  },
+  {
+    "strategyId": 6,
+    "original": "Train leaders on strategic planning and realistic expectations",
+    "text": "Train leaders on realistic timelines and resource needs, and how to build behavioural research into organisational planning.",
+    "sources": ["Appendix C 8.6"]
+  },
+  {
+    "strategyId": 7,
+    "original": "Co-design solutions with affected populations and advisory groups",
+    "text": "Co-design solutions with affected populations and advisory groups, e.g., work with people in arrears on rates bills to identify barriers and practical solutions.",
+    "sources": ["Appendix C 5.2", "Appendix B, Table B5, Government 1"]
+  },
+  {
+    "strategyId": 7,
+    "original": "Educate clients and stakeholders about research processes",
+    "text": "Educate clients and stakeholders about research processes while meaningfully including public involvement and lived experiences.",
+    "sources": ["Table 3, strategy 7", "Appendix C 3.3"]
+  },
+  {
+    "strategyId": 7,
+    "original": "Ensure local and national government involvement in research for policy impact",
+    "text": "Include local authorities and government as funding partners for national policy implementation, despite their budget constraints.",
+    "sources": ["Appendix B, Table B3, Academic 2"]
+  },
+  {
+    "strategyId": 8,
+    "original": "Bridge gaps between sectors and disciplines",
+    "text": "Create transdisciplinary roles to bridge gaps between fields and educate sectors on collaboration processes.",
+    "sources": ["Appendix C 3.2"]
+  },
+  {
+    "strategyId": 8,
+    "original": "Facilitate cross-sector learning and collaboration",
+    "text": "Draw on successful case studies from other sectors, e.g., health, to support cross-sector learning.",
+    "sources": ["Appendix C 4.1"]
+  },
+  {
+    "strategyId": 9,
+    "original": "Move beyond individual behaviour models",
+    "text": "Move beyond individual-only models to frameworks that include group, organisational or structural influences.",
+    "sources": ["Appendix C 4.6"]
+  },
+  {
+    "strategyId": 9,
+    "original": "Use systems mapping as a foundation",
+    "text": "Use systems mapping before designing interventions.",
+    "sources": ["Appendix C 4.5"]
+  },
+  {
+    "strategyId": 9,
+    "original": "Focus on long-term and sustainable change",
+    "text": "Support research that examines long-term change across systems.",
+    "sources": ["Appendix C 4.8"]
+  },
+  {
+    "strategyId": 10,
+    "original": "Clear definitions and terminology",
+    "text": "Clarify behavioural research terminology to reduce confusion and misinformation.",
+    "sources": ["Appendix C 1.1"]
+  },
+  {
+    "strategyId": 10,
+    "original": "Methodological standards",
+    "text": "Establish trusted, sector-wide guidance on methodological standards, including ethical evaluation, research governance and data protection.",
+    "sources": ["Appendix C 4.14"]
+  },
+  {
+    "strategyId": 10,
+    "original": "Sector-specific guidance",
+    "text": "Develop sector-specific resources and case studies to make behavioural research more accessible and relevant.",
+    "sources": ["Appendix C 4.2"]
+  }
+]
