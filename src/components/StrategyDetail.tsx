@@ -51,7 +51,7 @@ export function StrategyDetail({
             target="_blank"
             rel="noreferrer"
           >
-            See strategy {strategy.id} in Table 3
+            See Strategy {strategy.id} in Table 3
             <Icon name="external" size={17} />
           </a>
           <button
