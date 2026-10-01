@@ -82,7 +82,7 @@ export type RoleId = Role["id"];
 
 // Short labels are for map navigation only. Titles and actor mappings follow Table 3.
 const mapLabels = [
-  ["Communicate", "clearly"],
+  ["Create accessible", "resources"],
   ["Share", "resources"],
   ["Embed in", "decisions"],
   ["Build", "skills"],
